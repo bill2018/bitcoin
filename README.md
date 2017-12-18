@@ -1,82 +1,82 @@
-Bitcoin Core integration/staging tree
+比特币核心整合/分期树
 =====================================
 
 [![Build Status](https://travis-ci.org/bitcoin/bitcoin.svg?branch=master)](https://travis-ci.org/bitcoin/bitcoin)
 
 https://bitcoincore.org
 
-What is Bitcoin?
+什么是比特币？
 ----------------
 
-Bitcoin is an experimental digital currency that enables instant payments to
-anyone, anywhere in the world. Bitcoin uses peer-to-peer technology to operate
-with no central authority: managing transactions and issuing money are carried
-out collectively by the network. Bitcoin Core is the name of open source
-software which enables the use of this currency.
+比特币是实现即时付款的实验性数字货币
+任何人，在世界任何地方。比特币使用点对点技术进行操作
+没有中央的权力：管理交易和发行货币
+由网络集体进行。 Bitcoin Core是开源的名字
+可以使用这种货币的软件。
 
-For more information, as well as an immediately useable, binary version of
-the Bitcoin Core software, see https://bitcoin.org/en/download, or read the
-[original whitepaper](https://bitcoincore.org/bitcoin.pdf).
+有关更多信息，以及可立即使用的二进制版本
+比特币核心软件，请参阅https://bitcoin.org/en/download或阅读
+[原始白皮书](https://bitcoincore.org/bitcoin.pdf)。
 
-License
+执照
 -------
 
-Bitcoin Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
-information or see https://opensource.org/licenses/MIT.
+Bitcoin Core是根据MIT许可条款发布的。有关更多信息，请参见[复制](复制)
+信息或查看https://opensource.org/licenses/MIT。
 
-Development Process
+开发过程
 -------------------
 
-The `master` branch is regularly built and tested, but is not guaranteed to be
-completely stable. [Tags](https://github.com/bitcoin/bitcoin/tags) are created
-regularly to indicate new official, stable release versions of Bitcoin Core.
+“主”分支定期建造和测试，但不能保证
+完全稳定。标签(https://github.com/bitcoin/bitcoin/tags)被创建
+定期发布比特币核心的官方稳定版本。
 
-The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md).
+贡献工作流程在[CONTRIBUTING.md](CONTRIBUTING.md)中描述。
 
-The developer [mailing list](https://lists.linuxfoundation.org/mailman/listinfo/bitcoin-dev)
-should be used to discuss complicated or controversial changes before working
-on a patch set.
+开发者[邮件列表](https://lists.linuxfoundation.org/mailman/listinfo/bitcoin-dev)
+在工作之前应该用来讨论复杂或有争议的变化
+在补丁集上。
 
-Developer IRC can be found on Freenode at #bitcoin-core-dev.
+开发者IRC可以在#bitcoin-core-dev的Freenode上找到。
 
-Testing
+测试
 -------
 
-Testing and code review is the bottleneck for development; we get more pull
-requests than we can review and test on short notice. Please be patient and help out by testing
-other people's pull requests, and remember this is a security-critical project where any mistake might cost people
-lots of money.
+测试和代码审查是发展的瓶颈;我们得到更多的拉
+要求比我们可以在短时间内审查和测试。请耐心等待，并通过测试帮助
+别人的pull请求，记住这是一个安全关键的项目，任何错误都可能导致人们的损失
+很多钱。
 
-### Automated Testing
+###自动化测试
 
-Developers are strongly encouraged to write [unit tests](src/test/README.md) for new code, and to
-submit new unit tests for old code. Unit tests can be compiled and run
-(assuming they weren't disabled in configure) with: `make check`. Further details on running
-and extending unit tests can be found in [/src/test/README.md](/src/test/README.md).
+强烈建议开发人员为新代码编写[单元测试](src / test / README.md)
+为旧代码提交新的单元测试。单元测试可以编译并运行
+(假设它们在配置中没有被禁用)：`make check`。进一步的细节在运行
+和扩展单元测试可以在[/src/test/README.md](/src/test/README.md)找到。
 
-There are also [regression and integration tests](/test), written
-in Python, that are run automatically on the build server.
-These tests can be run (if the [test dependencies](/test) are installed) with: `test/functional/test_runner.py`
+还有[回归和集成测试](/测试)，书面
+在Python中，在构建服务器上自动运行。
+这些测试可以运行(如果安装了[测试依赖关系](/ test))：`test / functional / test_runner.py`
 
-The Travis CI system makes sure that every pull request is built for Windows, Linux, and OS X, and that unit/sanity tests are run automatically.
+Travis CI系统确保每个拉取请求都是为Windows，Linux和OS X构建的，并且单元/健全性测试是自动运行的。
 
-### Manual Quality Assurance (QA) Testing
+###手动质量保证(QA)测试
 
-Changes should be tested by somebody other than the developer who wrote the
-code. This is especially important for large or high-risk changes. It is useful
-to add a test plan to the pull request description if testing the changes is
-not straightforward.
+更改应该由除编写该开发人员以外的人进行测试
+码。这对于大的或高风险的变化尤其重要。它是有益的
+如果测试更改是将测试计划添加到拉取请求描述
+不直截了当
 
-Translations
+翻译
 ------------
 
-Changes to translations as well as new translations can be submitted to
-[Bitcoin Core's Transifex page](https://www.transifex.com/projects/p/bitcoin/).
+可以提交对翻译的更改以及新的翻译
+[比特币核心的Transifex页面](https://www.transifex.com/projects/p/bitcoin/)。
 
-Translations are periodically pulled from Transifex and merged into the git repository. See the
-[translation process](doc/translation_process.md) for details on how this works.
+翻译定期从Transifex中提取并合并到git存储库中。看到了
+[翻译过程](doc / translation_process.md)了解如何工作的细节。
 
-**Important**: We do not accept translation changes as GitHub pull requests because the next
-pull from Transifex would automatically overwrite them again.
+**重要**：我们不接受翻译更改作为GitHub拉请求，因为下一个
+从Transifex拉动会自动覆盖它们。
 
-Translators should also subscribe to the [mailing list](https://groups.google.com/forum/#!forum/bitcoin-translators).
+译员还应该订阅[邮件列表](https://groups.google.com/forum/#!forum/bitcoin-translators)。
